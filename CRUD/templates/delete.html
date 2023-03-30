@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}
+<title>
+    刪除資料表
+</title>
+{% endblock %}
+{% block content %}
+<h1>
+    資料表刪除
+</h1>
+<form action="." method="POST" name="form1">
+    {% csrf_token %}
+    <div>
+        請輸入編號: <input type="text" id="cId" name="cId" value="{{id}}"/>
+    </div>
+    <div>
+        <input type="submit" name="botton" id="button" value="刪除" />
+    </div>
+    <span style="color:red"> {{message}} </span>
+</form>
+{% endblock %}
