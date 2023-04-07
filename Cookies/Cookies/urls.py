@@ -1,4 +1,4 @@
-"""CRUD URL Configuration
+"""Cookies URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -15,18 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from CRUDapp import views
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/',views.index),
-    path('',views.index),
-    path('post1/',views.post1),
-    path('post2/',views.post2),
-    path('delete/',views.delete),
-    path('delete/<int:id>/',views.delete),
-    path('edit/<int:id>/',views.edit),
-    path('edit/<int:id>/<str:mode>',views.edit),
-    path('edit2/<int:id>/<str:mode>',views.edit2),
 ]
