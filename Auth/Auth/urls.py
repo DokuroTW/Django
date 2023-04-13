@@ -1,4 +1,4 @@
-"""Sessions URL Configuration
+"""Auth URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -15,17 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from SessionsApp import views
-
-
+from AuthApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('NewSession/<str:key>/<str:value>',views.NewSession),
-    path('GetSession/<str:key>/',views.GetSession),
-    path('GetAllSessions/',views.GetAllSessions),
-    path('vote/',views.vote),
-    path('TimeSession/<str:key>/<str:value>/',views.TimeSession),
-    path('DeleteSession/<str:key>/',views.DeleteSession),
+    path('adduser/',views.adduser),
+    path('',views.index),
+    path('index/',views.index),
     path('login/',views.login),
     path('logout/',views.logout),
 ]
