@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" >
+        <title>新聞公告</title>
+        {% load static %}
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" >
+    </head>
+    <body id="warp">
+        <div id="header">
+            <div class="logo">
+                <div>
+                    <img src="{% static 'images/DWonline.png' %}" width="180" height="40" alt="news">
+                </div>
+            </div>
+            <div class="headings">
+                <h2>新聞公告系統</h2>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
